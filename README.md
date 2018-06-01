@@ -1,12 +1,18 @@
-# React Instscan
-Port of Instascan library to React
+# React Instascan
+## Port of [Instascan](https://github.com/schmich/instascan) library to React  
+[![npm version](https://badge.fury.io/js/react-instascan.svg)](https://badge.fury.io/js/react-instascan)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 # Installing
-npm
-`npm install react-instascan --save`
+**npm**   
+```bash
+npm install react-instascan --save
+```
 
-yarn
-`yarn add react-instascan`
+**yarn**  
+```bash
+yarn add react-instascan
+```
 
 # Using it
 
@@ -41,7 +47,6 @@ Other event types are also available (check the API table):
 | onStop            | function          | Called when camera and scanning have stopped |
 | onActive          | function          | Emitted when the scanner becomes active as the result of stop becoming false or the tab gaining focus |
 | onInactive        | function          | Emitted when the scanner becomes inactive as the result of stop becoming true or the tab losing focus |
-|-------------------|-------------------|---------------------------------------------------|
 
 For more details check the [Instascan API](https://github.com/schmich/instascan#api)
 
