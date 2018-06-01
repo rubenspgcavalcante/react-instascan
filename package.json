@@ -7,12 +7,18 @@
   "author": "Rubens Pinheiro <rubenspgcavalcante@gmail.com>",
   "license": "MIT",
   "private": false,
-  "browserslist": "ie 10",
+  "browserslist": [
+    "defaults",
+    "not IE >= 0",
+    "not OperaMini all",
+    "not ios_saf 10.3"
+  ],
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "start": "NODE_ENV=development webpack-dev-server --open",
     "eslint": "eslint \"{sample,src}/**/*.{js,jsx}\"",
-    "format": "prettier-eslint --write \"{sample,src}/**/*.{js,jsx}\""
+    "format": "prettier-eslint --write \"{sample,src}/**/*.{js,jsx}\"",
+    "analyze": "NODE_ENV=production webpack --env=analyze"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
@@ -33,6 +39,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "webpack": "^4.10.2",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },

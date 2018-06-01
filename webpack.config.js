@@ -1,9 +1,10 @@
-HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const mode = process.env.NODE_ENV;
 const isProd = mode === 'production';
 
-module.exports = {
+module.exports = env => ({
   mode,
   node: {
     fs: "empty"
@@ -28,15 +29,17 @@ module.exports = {
     library: "react-instascan",
     libraryTarget: "umd"
   },
+  externals: ["react", "instascan"],
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   },
   plugins: [
-    !isProd ? new HtmlWebpackPlugin({
+    env === "analyze" && new BundleAnalyzerPlugin({ analyzerMode: "server" }),
+    !isProd && new HtmlWebpackPlugin({
       title: "React Instascan Sample",
       inject: false,
       appMountId: 'app',
       template: require('html-webpack-template')
-    }) : null
+    })
   ].filter(notNull => notNull)
-};
+});
