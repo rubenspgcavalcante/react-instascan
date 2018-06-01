@@ -5,12 +5,22 @@ const isProd = mode === 'production';
 
 module.exports = {
   mode,
+  node: {
+    fs: "empty"
+  },
+  devtool: isProd ? "source-map" : "eval-source-map",
   entry: {
     main: isProd ? './src/index.js' : './sample/index.jsx'
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, use: 'babel-loader' }
+      {
+        enforce: "pre",
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
+      { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ }
     ]
   },
   output: {
