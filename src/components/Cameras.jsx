@@ -11,10 +11,12 @@ export default class Cameras extends PureComponent {
   state = { ready: false };
 
   componentDidMount() {
-    Instascan.Camera.getCameras().then(cameras => {
-      this._cameras = cameras;
-      this.setState({ ready: true });
-    });
+    Instascan.Camera.getCameras()
+      .then(cameras => {
+        this._cameras = cameras;
+        this.setState({ ready: true });
+      })
+      .catch(err => this.props.children(err));
   }
 
   render() {

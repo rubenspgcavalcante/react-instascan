@@ -14,7 +14,8 @@ export default class Scanner extends Component {
     onScan: func,
     onActive: func,
     onInactive: func,
-    stop: bool
+    stop: bool,
+    options: object
   };
 
   _scanner = null;
@@ -37,9 +38,16 @@ export default class Scanner extends Component {
   }
 
   componentDidMount() {
-    const { camera, stop, onScan = nil, onActive = nil, onInactive = nil } = this.props;
+    const {
+      options = {},
+      camera,
+      stop,
+      onScan = nil,
+      onActive = nil,
+      onInactive = nil
+    } = this.props;
 
-    this._scanner = new Instascan.Scanner({ video: this._ref.current });
+    this._scanner = new Instascan.Scanner({ ...options, video: this._ref.current });
     if (!stop) {
       this._scanner.addListener("scan", onScan);
     }
