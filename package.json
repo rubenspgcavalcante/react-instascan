@@ -9,14 +9,16 @@
   "private": false,
   "browserslist": "ie 10",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack --mode development"
+    "build": "NODE_ENV=production webpack",
+    "start": "NODE_ENV=development webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.49",
     "babel-loader": "^8.0.0-beta",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.4"
   },
