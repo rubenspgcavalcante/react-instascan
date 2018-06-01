@@ -17,6 +17,15 @@ yarn add react-instascan
 # Using it
 
 React Instascan exposes two Components: **Cameras** and **Scanner**.  
+With ESModules:
+```js
+import { Cameras, Scanner } from "react-instascan";
+```
+or with CommonsJS:
+```js
+const { Cameras, Scanner } = require("react-instascan");
+```
+
 The "Cameras" component with a [render prop](https://reactjs.org/docs/render-props.html) and will fetch for the 
 available cameras on your device.  
 The Scanner Component receives as props the *camera* and a [**VideoHTMLElement**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) 
