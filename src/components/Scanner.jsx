@@ -21,7 +21,7 @@ export default class Scanner extends Component {
   _scanner = null;
   _ref = null;
 
-  shouldComponentUpdate({ stop, onStart = nil, onStop = nil }) {
+  shouldComponentUpdate({ stop, onStart = nil, onStop = nil, camera }) {
     if (this._scanner) {
       stop
         ? this._scanner
@@ -29,7 +29,7 @@ export default class Scanner extends Component {
             .then(onStop)
             .catch(onStop)
         : this._scanner
-            .start()
+            .start(camera)
             .then(onStart)
             .catch(onStart);
     }
