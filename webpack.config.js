@@ -1,8 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const mode = process.env.NODE_ENV;
-const isProd = mode === 'production';
+const isProd = mode === "production";
 
 module.exports = env => ({
   mode,
@@ -11,7 +11,7 @@ module.exports = env => ({
   },
   devtool: isProd ? "source-map" : "eval-source-map",
   entry: {
-    main: isProd ? './src/index.js' : './sample/index.jsx'
+    main: isProd ? "./src/index.js" : "./sample/index.jsx"
   },
   module: {
     rules: [
@@ -21,7 +21,7 @@ module.exports = env => ({
         exclude: /node_modules/,
         loader: "eslint-loader"
       },
-      { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ }
+      { test: /\.jsx?$/, use: "babel-loader", exclude: /node_modules/ }
     ]
   },
   output: {
@@ -31,15 +31,16 @@ module.exports = env => ({
   },
   externals: ["react", "instascan"],
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: [".js", ".jsx", ".json"]
   },
   plugins: [
     env === "analyze" && new BundleAnalyzerPlugin({ analyzerMode: "server" }),
-    !isProd && new HtmlWebpackPlugin({
-      title: "React Instascan Sample",
-      inject: false,
-      appMountId: 'app',
-      template: require('html-webpack-template')
-    })
+    !isProd &&
+      new HtmlWebpackPlugin({
+        title: "React Instascan Sample",
+        inject: false,
+        appMountId: "app",
+        template: require("html-webpack-template")
+      })
   ].filter(notNull => notNull)
 });
