@@ -20,7 +20,9 @@
     "moduleNameMapper": {
       "instascan": "<rootDir>/tests/__mocks__/instascan.mock.js"
     },
-    "collectCoverageFrom": ["src/{components,utils}/*.{js,jsx}"]
+    "collectCoverageFrom": [
+      "src/{components,utils}/*.{js,jsx}"
+    ]
   },
   "scripts": {
     "precommit": "yarn format",
@@ -43,6 +45,7 @@
     "babel-eslint": "^8.2.3",
     "babel-jest": "^23.0.1",
     "babel-loader": "^8.0.0-beta",
+    "codacy-coverage": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
