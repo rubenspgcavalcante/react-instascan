@@ -1,21 +1,34 @@
 # React Instascan
 ## Port of [Instascan](https://github.com/schmich/instascan) library to React  
+[![Build Status](https://travis-ci.org/rubenspgcavalcante/react-instascan.svg?branch=master)](https://travis-ci.org/rubenspgcavalcante/react-instascan)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/639bf0dfa90f47b280f31e7498a40f5a)](https://www.codacy.com/app/rubenspgcavalcante/react-instascan?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rubenspgcavalcante/react-instascan&amp;utm_campaign=Badge_Grade)
 [![npm version](https://badge.fury.io/js/react-instascan.svg)](https://badge.fury.io/js/react-instascan)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 # Installing
 **npm**   
 ```bash
-npm install react-instascan --save
+npm install react-instascan react instascan --save
 ```
 
 **yarn**  
 ```bash
-yarn add react-instascan
+yarn add react-instascan react instascan
 ```
+
+**Using unpkg CDN**
+```html
+<script type="application/javascript" src="https://unpkg.com/react-instascan/dist/main.js"></script>
+```
+
+## Requirements
+To use this library you need at least:
+ - React >= 16
+ - Instascan >= 1
 
 # Using it
 
+## Importing
 React Instascan exposes two Components: **Cameras** and **Scanner**.  
 With ESModules:
 ```js
