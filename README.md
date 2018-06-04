@@ -2,6 +2,7 @@
 ## Port of [Instascan](https://github.com/schmich/instascan) library to React  
 [![Build Status](https://travis-ci.org/rubenspgcavalcante/react-instascan.svg?branch=master)](https://travis-ci.org/rubenspgcavalcante/react-instascan)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/639bf0dfa90f47b280f31e7498a40f5a)](https://www.codacy.com/app/rubenspgcavalcante/react-instascan?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rubenspgcavalcante/react-instascan&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/639bf0dfa90f47b280f31e7498a40f5a)](https://www.codacy.com/app/rubenspgcavalcante/react-instascan?utm_source=github.com&utm_medium=referral&utm_content=rubenspgcavalcante/react-instascan&utm_campaign=Badge_Coverage)
 [![npm version](https://badge.fury.io/js/react-instascan.svg)](https://badge.fury.io/js/react-instascan)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
