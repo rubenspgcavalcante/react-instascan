@@ -28,6 +28,7 @@
     "precommit": "yarn format",
     "prepush": "yarn eslint",
     "test": "NODE_ENV=test jest --coverage",
+    "test:watch": "yarn test -- --watch",
     "build": "NODE_ENV=production webpack",
     "start": "NODE_ENV=development webpack-dev-server --open",
     "eslint": "eslint \"{webpack.config.js,{sample,src,tests}/**/*.{js,jsx}}\"",
