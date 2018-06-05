@@ -5,12 +5,16 @@ export const Camera = {
 };
 
 export const Scanner = jest.fn().mockImplementation(opts => {
-  Scanner.instances.push({ __mock__: { getOptions: () => opts } });
+  const instance = {
+    __mock__: { getOptions: () => opts },
 
-  return {
-    addListener: () => null,
-    start: () => null
+    addListener: (type, call) => call(),
+    start: cam => Promise.resolve(cam),
+    stop: () => Promise.resolve(),
+    removeAllListeners: () => null
   };
+  Scanner.instances.push(instance);
+  return instance;
 });
 Scanner.instances = [];
 
