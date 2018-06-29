@@ -13,7 +13,7 @@ describe("<Scanner />", () => {
   const getLastInstance = () => getInstance(Instascan.Scanner.instances.length - 1);
 
   const opts = { foo: "bar" };
-  const fakeCamera = { name: "frontCamera" };
+  const fakeCamera = { name: "frontCamera", stop: jest.fn() };
 
   it("Should pass property as options to Instascan.Scanner", () => {
     mount(
@@ -52,6 +52,7 @@ describe("<Scanner />", () => {
 
     wrapper.unmount();
     expect(mockedScanner.removeAllListeners).toHaveBeenCalled();
+    expect(fakeCamera.stop).toHaveBeenCalled();
   });
 
   describe("Starting and stoping camera", () => {
