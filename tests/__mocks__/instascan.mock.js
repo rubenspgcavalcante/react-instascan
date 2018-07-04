@@ -10,7 +10,7 @@ export const Scanner = jest.fn().mockImplementation(opts => {
 
     addListener: (type, call) => call(),
     start: cam => Promise.resolve(cam),
-    stop: () => Promise.resolve(),
+    stop: jest.fn( () => Promise.resolve()),
     removeAllListeners: () => null
   };
   Scanner.instances.push(instance);

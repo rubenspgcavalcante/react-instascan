@@ -52,7 +52,7 @@ describe("<Scanner />", () => {
 
     wrapper.unmount();
     expect(mockedScanner.removeAllListeners).toHaveBeenCalled();
-    expect(fakeCamera.stop).toHaveBeenCalled();
+    expect(mockedScanner.stop).toHaveBeenCalled();
   });
 
   describe("Starting and stoping camera", () => {
