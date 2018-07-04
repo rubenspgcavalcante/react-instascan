@@ -29,7 +29,7 @@ module.exports = env => ({
     library: "react-instascan",
     libraryTarget: "umd"
   },
-  externals: ["react", "instascan"],
+  externals: isProd ? ["react", "instascan"] : [],
   resolve: {
     extensions: [".js", ".jsx", ".json"]
   },
