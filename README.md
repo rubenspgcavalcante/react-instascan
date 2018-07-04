@@ -73,6 +73,29 @@ Other event types are also available (check the API table):
 
 For more details check the [Instascan API](https://github.com/schmich/instascan#api)
 
+# Contributing
+
+## Using directly from the source
+
+Although this project comes with a simple example, you may want to use this code
+directly on your code to test and fix possibly bugs. For that you can just link this package
+```
+yarn link
+```
+
+Go to your project root (where the `package.json` of your app is) and then use the linked version:
+```
+yarn link react-instascan
+```
+
+Now just start the build process on watch mode and you're going to see real time changes
+in your project
+```
+yarn build --watch
+```
+
+For more information about contributing see the [CONTRIBUTING](.github/CONTRIBUTING.md) guidelines
+
 # License
 
 This project is under the [MIT License](https://opensource.org/licenses/MIT)

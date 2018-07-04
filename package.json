@@ -29,7 +29,7 @@
     "prepush": "yarn eslint",
     "prepublish": "yarn test && yarn build",
     "test": "NODE_ENV=test jest --coverage",
-    "test:watch": "yarn test -- --watch",
+    "test:watch": "yarn test --watch",
     "test:watch:debug": "node --inspect-brk node_modules/.bin/jest --watch",
     "build": "NODE_ENV=production webpack",
     "start": "NODE_ENV=development webpack-dev-server --open",

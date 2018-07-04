@@ -59,7 +59,7 @@ export default class Scanner extends Component {
 
   componentWillUnmount() {
     this._scanner.removeAllListeners();
-    this.props.camera.stop();
+    this._scanner.stop();
   }
 
   render() {
