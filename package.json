@@ -26,7 +26,8 @@
   },
   "scripts": {
     "precommit": "yarn format",
-    "prepush": "yarn eslint && yarn build",
+    "prepush": "yarn eslint",
+    "prepublish": "yarn test && yarn build",
     "test": "NODE_ENV=test jest --coverage",
     "test:watch": "yarn test -- --watch",
     "test:watch:debug": "node --inspect-brk node_modules/.bin/jest --watch",
