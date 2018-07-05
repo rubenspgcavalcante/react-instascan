@@ -4259,7 +4259,13 @@ inquirer@^5.2.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-instascan@^1.0.0:
+instascan-umd@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/instascan-umd/-/instascan-umd-1.0.0.tgz#bcd2cfc872c7b96ec2013d567c2ed73f3fe41701"
+  dependencies:
+    instascan "1.0.0"
+
+instascan@1.0.0, instascan@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/instascan/-/instascan-1.0.0.tgz#de5949f73f698f8dff68df0a7bcf6942a799ee44"
   dependencies:

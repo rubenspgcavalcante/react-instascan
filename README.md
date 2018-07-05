@@ -9,12 +9,12 @@
 # Installing
 **npm**   
 ```bash
-npm install react-instascan react instascan --save
+npm install react-instascan react instascan-umd --save
 ```
 
 **yarn**  
 ```bash
-yarn add react-instascan react instascan
+yarn add react-instascan react instascan-umd
 ```
 
 **Using unpkg CDN**
@@ -24,8 +24,8 @@ yarn add react-instascan react instascan
 
 ## Requirements
 To use this library you need at least:
- - React >= 16
- - Instascan >= 1
+ - react >= 16
+ - instascan-umd >= 1
 
 # Using it
 

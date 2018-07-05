@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { func } from "prop-types";
-import Instascan from "instascan";
+import Instascan from "instascan-umd";
 
 export default class Cameras extends PureComponent {
   static propTypes = {
