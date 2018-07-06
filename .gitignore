@@ -4,6 +4,7 @@ coverage/
 
 #IDE
 .idea/
+.vscode/
 
 # Logs
 logs

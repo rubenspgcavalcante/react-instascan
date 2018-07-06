@@ -6,15 +6,19 @@
 [![npm version](https://badge.fury.io/js/react-instascan.svg)](https://badge.fury.io/js/react-instascan)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
+# Warning
+This library is using `instascan-umd` instead of `instascan` as a per-dependencie.
+If you're upgrading for newer verions you must install `istascan-umd`.
+
 # Installing
 **npm**   
 ```bash
-npm install react-instascan react instascan --save
+npm install react-instascan react instascan-umd --save
 ```
 
 **yarn**  
 ```bash
-yarn add react-instascan react instascan
+yarn add react-instascan react instascan-umd
 ```
 
 **Using unpkg CDN**
@@ -24,8 +28,8 @@ yarn add react-instascan react instascan
 
 ## Requirements
 To use this library you need at least:
- - React >= 16
- - Instascan >= 1
+ - react >= 16
+ - instascan-umd >= 1
 
 # Using it
 

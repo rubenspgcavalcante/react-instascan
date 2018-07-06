@@ -1,5 +1,5 @@
 import React from "react";
-import Instascan from "instascan";
+import Instascan from "instascan-umd";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Cameras from "../../src/components/Cameras";
