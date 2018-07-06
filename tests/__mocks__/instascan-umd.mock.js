@@ -18,5 +18,5 @@ const Scanner = jest.fn().mockImplementation(opts => {
   return instance;
 });
 
-export {Camera, Scanner};
+export { Camera, Scanner };
 export default { Camera, Scanner };
