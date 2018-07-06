@@ -1,10 +1,11 @@
-export const Camera = {
+const Camera = {
   getCameras: jest.fn(() => {
     return Promise.resolve([]);
   })
 };
 
-export const Scanner = jest.fn().mockImplementation(opts => {
+const Scanner = jest.fn().mockImplementation(opts => {
+  Scanner.instances = [];
   const instance = {
     __mock__: { getOptions: () => opts },
 
@@ -16,6 +17,6 @@ export const Scanner = jest.fn().mockImplementation(opts => {
   Scanner.instances.push(instance);
   return instance;
 });
-Scanner.instances = [];
 
+export {Camera, Scanner};
 export default { Camera, Scanner };

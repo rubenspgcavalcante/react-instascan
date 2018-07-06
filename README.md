@@ -6,6 +6,10 @@
 [![npm version](https://badge.fury.io/js/react-instascan.svg)](https://badge.fury.io/js/react-instascan)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
+# Warning
+This library is using `instascan-umd` instead of `instascan` as a per-dependencie.
+If you're upgrading for newer verions you must install `istascan-umd`.
+
 # Installing
 **npm**   
 ```bash
