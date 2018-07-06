@@ -1,6 +1,6 @@
 {
   "name": "react-instascan",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "A React port of the Instascan lib",
   "main": "dist/main.js",
   "repository": "git@github.com:rubenspgcavalcante/react-instascan.git",
