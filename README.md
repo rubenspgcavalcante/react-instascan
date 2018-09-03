@@ -28,7 +28,7 @@ yarn add react-instascan react instascan-umd
 
 ## Requirements
 To use this library you need at least:
- - react >= 16
+ - react >= 16.3
  - instascan-umd >= 1
 
 # Using it
